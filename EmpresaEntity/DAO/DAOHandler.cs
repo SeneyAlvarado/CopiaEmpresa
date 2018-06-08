@@ -14,7 +14,10 @@ namespace DAO
         public List<TO.ClienteTO> getClients()
         {
 
-            var query = from clients in context.Clientes
+            using (context = new EmpresaEntities())
+            {
+
+                var query = from clients in context.Clientes
                         select clients;
 
 
@@ -29,7 +32,10 @@ namespace DAO
                 clienteTO.Apellido = client.Apellido;
                 list.Add(clienteTO);
             }
+
+             
             return list;
+        }
         }
 
         public void insertarCliente(ClienteTO cliente)

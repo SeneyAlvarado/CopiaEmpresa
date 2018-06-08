@@ -8,8 +8,8 @@ namespace BL
     public class ReporteFacturacionBL
     {
         public int Consecutivo;
-        public Cliente Cliente;
-        public List<Factura> Historico;
+        public ClienteBL Cliente;
+        public List<FacturaBL> Historico;
         public double Total;
     }
 }
