@@ -123,6 +123,7 @@ namespace DAO
         {
             using (context = new EmpresaEntities())
             {
+
                 Factura facturaDAO = new Factura
                 {
 
@@ -223,6 +224,40 @@ namespace DAO
                 throw new Exception();
             }
         }
+
+        public void actualizarProducto(ProductoTO productoTO)
+        {
+            context = new EmpresaEntities();
+
+            Producto productoDAO = (from producto in context.Productoes
+                               where producto.ID_Producto == productoTO.Codigo
+                               select producto).First();
+
+            productoDAO.Cantidad_Disponible  = productoTO.CantidadInventario;
+            productoDAO.Descripcion = productoTO.Descripcion;
+            productoDAO.Precio_Unidad = productoTO.PrecioVenta;
+            context.SaveChanges();
+        }
+        public void extraerProducto(ProductoTO productoTO)
+        {
+            using (context = new EmpresaEntities())
+            {
+                var query = from producto in context.Productoes
+                            where productoTO.Codigo == producto.ID_Producto
+                            select producto;
+
+                if (query != null)
+                {
+                    foreach (Producto c in query)
+                    {
+                        productoTO.CantidadInventario = c.Cantidad_Disponible;
+                        productoTO.Descripcion = c.Descripcion;
+                        productoTO.PrecioVenta = c.Precio_Unidad;
+                    }
+                }
+            }
+        }
+
 
     }
 }

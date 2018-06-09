@@ -47,6 +47,25 @@ namespace BL
 
         }
 
+        public void eliminarProducto(String codigo)
+        {
+            this.Codigo = int.Parse(codigo);
+
+            ProductoTO productoTO = new ProductoTO();
+            productoTO.Codigo = this.Codigo;
+
+            try
+            {
+                dao = new DAOHandler();
+                dao.eliminarProducto(productoTO);
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+
+        }
+
 
     }
 }
