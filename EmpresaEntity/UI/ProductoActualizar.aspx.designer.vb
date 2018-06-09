@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ProductoInsertar
+Partial Public Class ProductoActualizar
     
     '''<summary>
     '''form1 control.
@@ -149,13 +149,31 @@ Partial Public Class ProductoInsertar
     Protected WithEvents revCantidad As Global.System.Web.UI.WebControls.RegularExpressionValidator
     
     '''<summary>
-    '''btnInsertar control.
+    '''btnActualizar control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnInsertar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnActualizar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnBuscar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnMostrarClientes control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnMostrarClientes As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''btnInicio control.

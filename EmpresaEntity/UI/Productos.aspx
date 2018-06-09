@@ -32,6 +32,10 @@
         <br />
         <br />
         <asp:Button ID="btnMostrar" runat="server" Text="Mostrar todos los productos" Width="180px" />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="180px"/>
     </div>
     </form>
 </body>

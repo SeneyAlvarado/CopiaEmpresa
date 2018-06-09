@@ -20,4 +20,8 @@
     Protected Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Response.Redirect("ClientesEliminar.aspx")
     End Sub
+
+    Protected Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
+        Response.Redirect("Home.aspx")
+    End Sub
 End Class

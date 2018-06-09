@@ -41,13 +41,13 @@ Partial Public Class DeleteProducto
     Protected WithEvents txtCodigo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RequiredFieldValidator5 control.
+    '''rfvCodigo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator5 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvCodigo As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
     '''btnDelete control.
@@ -57,6 +57,15 @@ Partial Public Class DeleteProducto
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnDelete As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnInicio control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnInicio As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''lblMensaje control.

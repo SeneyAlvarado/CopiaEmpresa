@@ -57,4 +57,13 @@ Partial Public Class Productos
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnMostrar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnInicio control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnInicio As Global.System.Web.UI.WebControls.Button
 End Class
