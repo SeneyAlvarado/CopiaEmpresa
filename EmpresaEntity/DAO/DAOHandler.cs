@@ -25,8 +25,9 @@ namespace DAO
             ClienteTO clienteTO = new ClienteTO();
             foreach (Cliente client in query)
             {
-                clienteTO.Nombre = client.Nombre;
-                clienteTO.Telefono = client.Telefono;
+                    clienteTO = new ClienteTO();
+                    clienteTO.Nombre = client.Nombre;
+                    clienteTO.Telefono = client.Telefono;
                 clienteTO.Correo = client.Correo;
                 clienteTO.Cedula = client.Cedula;
                 clienteTO.Apellido = client.Apellido;
