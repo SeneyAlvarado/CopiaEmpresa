@@ -50,17 +50,15 @@
         <br />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtCantidad" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
         <br />
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtCorreo" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtCantidad" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
         <br />
         <br />
         <br />
-        <asp:Button ID="Prueba" runat="server" Text="Prueba" />
         <asp:Button ID="btnInsertar" runat="server" Text="Insertar Producto" style="height: 26px" />
         <br />
         <br />
         <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         <br />
-    
     </div>
     </form>
 </body>
