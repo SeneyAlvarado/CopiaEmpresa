@@ -20,6 +20,7 @@ namespace BL
 
         public void getClients(DataTable tableClients)
         {
+            dao = new DAOHandler();
             tableClients.Rows.Clear();
 
             foreach (TO.ClienteTO item in dao.getClients())
@@ -61,5 +62,19 @@ namespace BL
             this.Telefono = clienteTO.Telefono;
         }
 
+        public void actualizarCliente(String cedula, String nombre, String apellido, 
+            String correo, int telefono)
+        {
+            this.Cedula = cedula;
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.Correo = correo;
+            this.Telefono = telefono;
+
+            ClienteTO clienteTO = new ClienteTO(cedula, nombre, apellido, correo, telefono);
+
+            dao = new DAOHandler();
+            dao.actualizarCliente(clienteTO);
+        }
     }
 }

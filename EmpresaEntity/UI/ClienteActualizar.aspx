@@ -60,6 +60,8 @@
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtTelefono" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
         <br />
         <br />
+        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        <br />
         <br />
         <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" Width="157px" />
         <br />
