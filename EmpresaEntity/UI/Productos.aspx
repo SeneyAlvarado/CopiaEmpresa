@@ -13,8 +13,25 @@
 	         background-size: cover;
              width:auto;">
     <form id="form1" runat="server">
-    <div>
+ <div align="center">
     
+        <h2>Productos</h2>
+    <br />
+    </div>
+    <div align="center">
+        <asp:Button ID="btnInsertar" runat="server" Text="Insertar" Width="180px" />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" Width="180px" />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" Width="180px" />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="btnMostrar" runat="server" Text="Mostrar todos los productos" Width="180px" />
     </div>
     </form>
 </body>
