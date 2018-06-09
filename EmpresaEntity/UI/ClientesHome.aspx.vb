@@ -12,4 +12,8 @@
     Protected Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Response.Redirect("ClienteSelect.aspx")
     End Sub
+
+    Protected Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+        Response.Redirect("ClienteActualizar.aspx")
+    End Sub
 End Class
