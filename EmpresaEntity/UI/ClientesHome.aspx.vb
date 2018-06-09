@@ -16,4 +16,8 @@
     Protected Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Response.Redirect("ClienteActualizar.aspx")
     End Sub
+
+    Protected Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Response.Redirect("ClientesDelete.aspx")
+    End Sub
 End Class

@@ -12,4 +12,8 @@
     Protected Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
         Response.Redirect("Productos.aspx")
     End Sub
+
+    Protected Sub btnFacturas_Click(sender As Object, e As EventArgs) Handles btnFacturas.Click
+        Response.Redirect("Facturas.aspx")
+    End Sub
 End Class

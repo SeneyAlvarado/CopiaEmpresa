@@ -76,5 +76,16 @@ namespace BL
             dao = new DAOHandler();
             dao.actualizarCliente(clienteTO);
         }
+
+        public void eliminarCliente(String cedula)
+        {
+            this.Cedula = cedula;
+
+            ClienteTO clienteTO = new ClienteTO();
+            clienteTO.Cedula = this.Cedula;
+
+            dao = new DAOHandler();
+            dao.eliminarCliente(clienteTO);
+        }
     }
 }

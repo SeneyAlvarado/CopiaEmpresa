@@ -92,6 +92,32 @@ namespace DAO
             context.SaveChanges();
         }
 
+
+        public void eliminarCliente(ClienteTO clienteTO)
+        {
+            context = new EmpresaEntities();
+
+            var clienteEliminar =
+    from cliente in context.Clientes
+    where cliente.Cedula == clienteTO.Cedula
+    select cliente;
+
+            foreach (var clientDelete in clienteEliminar)
+            {
+                context.Clientes.Remove(clientDelete);
+            }
+
+            //try
+            //{
+                context.SaveChanges();
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e);
+            //    // Provide for exceptions.
+            //}
+        }
+
         /*-----------FACTURAS-----------*/
         public void insertarFactura(FacturaTO facturaTo)
         {
