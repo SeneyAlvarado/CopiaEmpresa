@@ -10,7 +10,7 @@ namespace DAO
     {
         private EmpresaEntities context;
 
-
+        /*-----------CLIENTES-----------*/
         public List<TO.ClienteTO> getClients()
         {
             using (context = new EmpresaEntities())
@@ -75,6 +75,24 @@ namespace DAO
             }
         }
 
+
+        public void actualizarCliente(ClienteTO clienteTO)
+        {
+            context = new EmpresaEntities();
+
+            Cliente cliente = (from clientes in context.Clientes
+                               where clientes.Cedula == clienteTO.Cedula
+                               select clientes).First();
+
+            cliente.Nombre = clienteTO.Nombre;
+            cliente.Apellido = clienteTO.Apellido;
+            cliente.Correo = clienteTO.Correo;
+            cliente.Telefono = clienteTO.Telefono;
+
+            context.SaveChanges();
+        }
+
+        /*-----------FACTURAS-----------*/
         public void insertarFactura(FacturaTO facturaTo)
         {
             using (context = new EmpresaEntities())
@@ -87,23 +105,6 @@ namespace DAO
                     Total = facturaTo.Total
                 };
                 context.Facturas.Add(facturaDAO);
-                context.SaveChanges();
-            }
-        }
-
-        public void insertarProducto(ProductoTO productoTO)
-        {
-            using (context = new EmpresaEntities())
-            {
-                Producto productoDAO = new Producto
-                {
-
-                    Cantidad_Disponible = productoTO.CantidadInventario,
-                    Descripcion = productoTO.Descripcion,
-                    ID_Producto = productoTO.Codigo,
-                    Precio_Unidad = productoTO.PrecioVenta
-                };
-                context.Productoes.Add(productoDAO);
                 context.SaveChanges();
             }
         }
@@ -131,6 +132,24 @@ namespace DAO
             }
         }
 
+
+        /*-----------PRODUCTOS-----------*/
+        public void insertarProducto(ProductoTO productoTO)
+        {
+            using (context = new EmpresaEntities())
+            {
+                Producto productoDAO = new Producto
+                {
+
+                    Cantidad_Disponible = productoTO.CantidadInventario,
+                    Descripcion = productoTO.Descripcion,
+                    ID_Producto = productoTO.Codigo,
+                    Precio_Unidad = productoTO.PrecioVenta
+                };
+                context.Productoes.Add(productoDAO);
+                context.SaveChanges();
+            }
+        }
 
         public List<TO.ProductoTO> getProductos()
         {

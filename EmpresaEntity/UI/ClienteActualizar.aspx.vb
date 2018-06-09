@@ -20,7 +20,13 @@ Public Class ClienteActualizar
     End Sub
 
     Protected Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-
+        Dim cedula As String = txtCedula.Text.Trim()
+        Dim nombre As String = txtNombre.Text.Trim()
+        Dim apellido As String = txtApellido.Text.Trim()
+        Dim correo As String = txtCorreo.Text.Trim()
+        Dim telefono As Integer = Integer.Parse(txtTelefono.Text.Trim())
+        cliente.actualizarCliente(cedula, nombre, apellido, correo, telefono)
+        lblMensaje.Text = "Los datos se actualizaron correctamente"
     End Sub
 
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
