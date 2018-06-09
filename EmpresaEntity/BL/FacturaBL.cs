@@ -2,16 +2,48 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DAO;
+using TO;
+using System.Data;
 
 namespace BL
 {
     public class FacturaBL
     {
         public int Consecutivo;
-        public ClienteBL Cliente;
+        public String Cliente;
         public ProductoBL Producto;
         public double SubTotal;
         public DateTime FechaHora;
         public double Total;
+        public DAOHandler dao = new DAOHandler();
+
+
+        public void getFacturas(DataTable tableFacturas)
+        {
+            tableFacturas.Rows.Clear();
+
+            foreach (FacturaTO item in dao.getFacturas())
+            {
+                tableFacturas.Rows.Add(item.Consecutivo, item.FechaHora, item.Cliente
+                    , item.Total);
+            }
+        }
+
+        public void agregarFactura(DateTime FechaHora, String cliente, float total)
+        {
+            this.FechaHora = FechaHora;
+            this.Cliente = cliente;
+            this.Total = total;
+
+            FacturaTO facturaTO = new FacturaTO();
+            facturaTO.FechaHora = this.FechaHora;
+            facturaTO.Cliente = this.Cliente;
+            facturaTO.Total = this.Total;
+
+            dao = new DAOHandler();
+            dao.insertarFactura(facturaTO);
+
+        }
     }
 }
