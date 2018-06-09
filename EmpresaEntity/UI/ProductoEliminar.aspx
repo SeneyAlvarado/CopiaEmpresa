@@ -25,10 +25,13 @@
     width: 90px;"></asp:Label>
         <asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox>
         <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtCodigo" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="rfvCodigo" runat="server" ControlToValidate="txtCodigo" ErrorMessage="Campo Requerido"></asp:RequiredFieldValidator>
        <br />
         <br />
         <asp:Button ID="btnDelete" runat="server" Text="Eliminar" style="height: 26px" />
+        <br />
+        <br />
+        <asp:Button ID="btnInicio" runat="server" CausesValidation="False" Text="Inicio" Width="69px" />
         <br />
         <br />
         <asp:Label ID="lblMensaje" runat="server"></asp:Label>

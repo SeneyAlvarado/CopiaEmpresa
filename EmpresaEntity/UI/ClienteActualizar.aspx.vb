@@ -11,10 +11,10 @@ Public Class ClienteActualizar
         txtTelefono.Enabled = False
         btnActualizar.Enabled = False
         btnActualizar.Visible = False
-        RequiredFieldValidator2.Enabled = False
-        RequiredFieldValidator3.Enabled = False
-        RequiredFieldValidator4.Enabled = False
-        RequiredFieldValidator1.Enabled = False
+        rfvCorreo.Enabled = False
+        rfvApellido.Enabled = False
+        rfvNombre.Enabled = False
+        rfvTelefono.Enabled = False
 
 
     End Sub
@@ -47,10 +47,18 @@ Public Class ClienteActualizar
         btnActualizar.Visible = True
         btnBuscar.Enabled = False
         btnBuscar.Visible = False
+        rfvCorreo.Enabled = True
+        rfvApellido.Enabled = True
+        rfvNombre.Enabled = True
+        rfvTelefono.Enabled = True
 
     End Sub
 
     Protected Sub btnMostrarClientes_Click(sender As Object, e As EventArgs) Handles btnMostrarClientes.Click
         Response.Redirect("ClienteSelect.aspx")
+    End Sub
+
+    Protected Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
+        Response.Redirect("Home.aspx")
     End Sub
 End Class

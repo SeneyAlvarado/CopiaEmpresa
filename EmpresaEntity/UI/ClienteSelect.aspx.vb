@@ -26,4 +26,7 @@ Public Class ClienteSelect
         End If
     End Sub
 
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
+        Response.Redirect("Home.aspx")
+    End Sub
 End Class

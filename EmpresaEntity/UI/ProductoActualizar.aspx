@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ProductoInsertar.aspx.vb" Inherits="UI.ProductoInsertar" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ProductoActualizar.aspx.vb" Inherits="UI.ProductoActualizar" %>
 
 <!DOCTYPE html>
 
@@ -13,8 +13,8 @@
 	         background-size: cover;
              width:auto;">
     <form id="form1" runat="server">
- <div align="center">
-            <h2>Insertar Producto</h2>
+        <div align="center">
+            <h2>Actualizar Producto</h2>
             <br />
             <br />
             <br />
@@ -54,10 +54,16 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="btnInsertar" runat="server" Text="Insertar" style="height: 26px" />
+        <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" Width="157px" />
         <br />
         <br />
-        <asp:Button ID="btnInicio" runat="server" CausesValidation="False" Text="Inicio" Width="63px" />
+        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="157px" />
+        <br />
+        <br />
+        <asp:Button ID="btnMostrarClientes" runat="server" Height="23px" Text="Mostrar todos los ptoductos" Width="157px" />
+        <br />
+        <br />
+        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="157px" />
         <br />
         <br />
         <asp:Label ID="lblMensaje" runat="server"></asp:Label>

@@ -41,13 +41,13 @@ Partial Public Class ClienteActualizar
     Protected WithEvents txtCedula As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RequiredFieldValidator5 control.
+    '''rfvCedula control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator5 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvCedula As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
     '''lblNombre control.
@@ -68,13 +68,13 @@ Partial Public Class ClienteActualizar
     Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RequiredFieldValidator4 control.
+    '''rfvNombre control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator4 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvNombre As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
     '''lblApellido control.
@@ -95,13 +95,13 @@ Partial Public Class ClienteActualizar
     Protected WithEvents txtApellido As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RequiredFieldValidator3 control.
+    '''rfvApellido control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator3 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvApellido As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
     '''lblCorreo control.
@@ -122,22 +122,22 @@ Partial Public Class ClienteActualizar
     Protected WithEvents txtCorreo As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RequiredFieldValidator2 control.
+    '''rfvCorreo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvCorreo As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
-    '''RegularExpressionValidator2 control.
+    '''revCorreo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RegularExpressionValidator2 As Global.System.Web.UI.WebControls.RegularExpressionValidator
+    Protected WithEvents revCorreo As Global.System.Web.UI.WebControls.RegularExpressionValidator
     
     '''<summary>
     '''lblTelefono control.
@@ -158,22 +158,22 @@ Partial Public Class ClienteActualizar
     Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''RequiredFieldValidator1 control.
+    '''rfvTelefono control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents rfvTelefono As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
-    '''RegularExpressionValidator1 control.
+    '''revTelefono control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RegularExpressionValidator1 As Global.System.Web.UI.WebControls.RegularExpressionValidator
+    Protected WithEvents revTelefono As Global.System.Web.UI.WebControls.RegularExpressionValidator
     
     '''<summary>
     '''lblMensaje control.
@@ -210,4 +210,13 @@ Partial Public Class ClienteActualizar
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnMostrarClientes As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnInicio control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnInicio As Global.System.Web.UI.WebControls.Button
 End Class

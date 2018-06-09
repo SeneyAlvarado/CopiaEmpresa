@@ -5,4 +5,7 @@
 
     End Sub
 
+    Protected Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
+        Response.Redirect("Home.aspx")
+    End Sub
 End Class

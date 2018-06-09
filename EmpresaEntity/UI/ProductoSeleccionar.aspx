@@ -23,6 +23,8 @@
         
          <div align="center">
              <asp:GridView ID="grdProductos" runat="server"></asp:GridView>
+             <br />
+             <asp:Button ID="btnInicio" runat="server" Text="Inicio" />
      </div>
     </form>
 </body>
