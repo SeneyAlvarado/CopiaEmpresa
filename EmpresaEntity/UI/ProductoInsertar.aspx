@@ -54,7 +54,8 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="btnInsertar" runat="server" Text="Insertar" style="height: 26px" />
+        <asp:Button ID="Prueba" runat="server" Text="Prueba" />
+        <asp:Button ID="btnInsertar" runat="server" Text="Insertar Producto" style="height: 26px" />
         <br />
         <br />
         <asp:Label ID="lblMensaje" runat="server"></asp:Label>
