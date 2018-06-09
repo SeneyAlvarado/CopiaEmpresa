@@ -8,4 +8,8 @@
     Protected Sub btnClientes_Click(sender As Object, e As EventArgs) Handles btnClientes.Click
         Response.Redirect("ClientesHome.aspx")
     End Sub
+
+    Protected Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
+        Response.Redirect("Productos.aspx")
+    End Sub
 End Class
