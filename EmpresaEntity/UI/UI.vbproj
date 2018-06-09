@@ -92,8 +92,10 @@
   <ItemGroup>
     <Content Include="ClienteActualizar.aspx" />
     <Content Include="ClienteInsertar.aspx" />
+    <Content Include="ClientesDelete.aspx" />
     <Content Include="ClienteSelect.aspx" />
     <Content Include="ClientesHome.aspx" />
+    <Content Include="DeleteProducto.aspx" />
     <Content Include="Facturas.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="ProductoInsertar.aspx" />
@@ -117,6 +119,13 @@
       <DependentUpon>ClienteInsertar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ClientesDelete.aspx.designer.vb">
+      <DependentUpon>ClientesDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesDelete.aspx.vb">
+      <DependentUpon>ClientesDelete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ClienteSelect.aspx.designer.vb">
       <DependentUpon>ClienteSelect.aspx</DependentUpon>
     </Compile>
@@ -129,6 +138,13 @@
     </Compile>
     <Compile Include="ClientesHome.aspx.vb">
       <DependentUpon>ClientesHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DeleteProducto.aspx.designer.vb">
+      <DependentUpon>DeleteProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProducto.aspx.vb">
+      <DependentUpon>DeleteProducto.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Facturas.aspx.designer.vb">

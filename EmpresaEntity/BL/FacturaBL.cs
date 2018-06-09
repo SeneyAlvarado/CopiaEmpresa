@@ -43,7 +43,6 @@ namespace BL
 
             dao = new DAOHandler();
             dao.insertarFactura(facturaTO);
-
         }
     }
 }
