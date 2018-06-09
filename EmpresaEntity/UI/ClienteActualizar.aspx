@@ -61,12 +61,14 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" style="height: 26px" />
-        <br />
-        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+        <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" Width="157px" />
         <br />
         <br />
-        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="157px" />
+        <br />
+        <br />
+        <asp:Button ID="btnMostrarClientes" runat="server" Height="23px" Text="Mostrar todos los clientes" Width="157px" />
+        <br />
         <br />
     
     </div>

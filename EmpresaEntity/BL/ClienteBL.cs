@@ -16,7 +16,7 @@ namespace BL
         public String Apellido;
         public String Correo;
         public int Telefono;
-        public DAOHandler dao = new DAOHandler();
+        public DAOHandler dao;
 
         public void getClients(DataTable tableClients)
         {
@@ -43,6 +43,22 @@ namespace BL
             dao = new DAOHandler();
             dao.insertarCliente(toCliente);
 
+        }
+
+        public void buscarCliente(String cedula)
+        {
+            this.Cedula = cedula;
+
+            ClienteTO clienteTO = new ClienteTO();
+            clienteTO.Cedula = this.Cedula;
+
+            dao = new DAOHandler();
+            dao.extraerCliente(clienteTO);
+
+            this.Nombre = clienteTO.Nombre;
+            this.Apellido = clienteTO.Apellido;
+            this.Correo = clienteTO.Correo;
+            this.Telefono = clienteTO.Telefono;
         }
 
     }

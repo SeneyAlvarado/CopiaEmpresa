@@ -37,6 +37,27 @@ namespace DAO
         }
         }
 
+        public void extraerCliente(ClienteTO clienteTO)
+        {
+            using (context = new EmpresaEntities())
+            {
+                var query = from clientes in context.Clientes
+                            where clienteTO.Cedula == clientes.Cedula
+                            select clientes;
+
+                if (query != null)
+                {
+                    foreach (Cliente c in query)
+                    {
+                        clienteTO.Nombre = c.Nombre;
+                        clienteTO.Apellido = c.Apellido;
+                        clienteTO.Correo = c.Correo;
+                        clienteTO.Telefono = c.Telefono;
+                    }
+                }
+            }
+        }
+
         public void insertarCliente(ClienteTO cliente)
         {
             using (context = new EmpresaEntities())
