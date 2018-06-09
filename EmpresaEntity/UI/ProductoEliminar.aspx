@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ClientesDelete.aspx.vb" Inherits="UI.ClientesDelete" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ProductoEliminar.aspx.vb" Inherits="UI.DeleteProducto" %>
 
 <!DOCTYPE html>
 
@@ -14,18 +14,18 @@
              width:auto;">
     <form id="form1" runat="server">
      <div align="center">
-            <h2>Eliminar Cliente</h2>
+            <h2>Eliminar Producto</h2>
             <br />
             <br />
             <br />
         </div>
     <div align="center">
     
-        <asp:Label ID="lblCedula" runat="server" Text="Cédula" style="display: inline-block;
+        <asp:Label ID="lblCodigo" runat="server" Text="Código" style="display: inline-block;
     width: 90px;"></asp:Label>
-        <asp:TextBox ID="txtCedula" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtCodigo" runat="server"></asp:TextBox>
         <br />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtCedula" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtCodigo" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
        <br />
         <br />
         <asp:Button ID="btnDelete" runat="server" Text="Eliminar" style="height: 26px" />

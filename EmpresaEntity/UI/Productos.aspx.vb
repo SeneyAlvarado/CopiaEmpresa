@@ -12,4 +12,8 @@
     Protected Sub btnMostrar_Click(sender As Object, e As EventArgs) Handles btnMostrar.Click
         Response.Redirect("ProductoSeleccionar.aspx")
     End Sub
+
+    Protected Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Response.Redirect("ProductoEliminar.aspx")
+    End Sub
 End Class

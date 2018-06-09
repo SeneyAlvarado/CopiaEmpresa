@@ -8,7 +8,13 @@ Public Class ClientesDelete
     End Sub
 
     Protected Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
-        clienteBL.eliminarCliente(txtCedula.Text.Trim)
-        lblMensaje.Text = "Cliente eliminado."
+        Try
+            clienteBL.eliminarCliente(txtCedula.Text.Trim)
+            lblMensaje.Text = "Cliente eliminado."
+        Catch ex As Exception
+            lblMensaje.Text = "Error al eliminar el cliente. Es posible que el cliente posea facturación."
+        End Try
+
+
     End Sub
 End Class

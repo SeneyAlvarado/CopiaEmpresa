@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TO;
+using System.Data.Entity.Infrastructure;
 
 namespace DAO
 {
@@ -107,15 +108,14 @@ namespace DAO
                 context.Clientes.Remove(clientDelete);
             }
 
-            //try
-            //{
+            try
+            {
                 context.SaveChanges();
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e);
-            //    // Provide for exceptions.
-            //}
+            }
+            catch (DbUpdateException  e)
+            {
+                throw new Exception();
+            }
         }
 
         /*-----------FACTURAS-----------*/
@@ -197,6 +197,30 @@ namespace DAO
                     list.Add(productoTO);
                 }
                 return list;
+            }
+        }
+
+        public void eliminarProducto(ProductoTO productoTO)
+        {
+            context = new EmpresaEntities();
+
+            var productoEliminar =
+    from producto in context.Productoes
+    where producto.ID_Producto == productoTO.Codigo
+    select producto;
+
+            foreach (var productDelete in productoEliminar)
+            {
+                context.Productoes.Remove(productDelete);
+            }
+
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (DbUpdateException e)
+            {
+                throw new Exception();
             }
         }
 

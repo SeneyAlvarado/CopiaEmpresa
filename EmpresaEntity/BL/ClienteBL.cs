@@ -84,8 +84,16 @@ namespace BL
             ClienteTO clienteTO = new ClienteTO();
             clienteTO.Cedula = this.Cedula;
 
-            dao = new DAOHandler();
-            dao.eliminarCliente(clienteTO);
+            try
+            {
+                dao = new DAOHandler();
+                dao.eliminarCliente(clienteTO);
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+            
         }
     }
 }
