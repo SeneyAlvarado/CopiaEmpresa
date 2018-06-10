@@ -57,7 +57,6 @@ namespace BL
 
         public void buscarCliente(String cedula)
         {
-
             try
             {
                 this.Cedula = cedula;
@@ -75,7 +74,6 @@ namespace BL
             }
             catch (Exception)
             {
-
                 throw;
             }
             

@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClienteActualizar.aspx" />
+    <Content Include="ClienteBuscar.aspx" />
     <Content Include="ClienteInsertar.aspx" />
     <Content Include="ClientesEliminar.aspx" />
     <Content Include="ClienteSelect.aspx" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="ClienteActualizar.aspx.vb">
       <DependentUpon>ClienteActualizar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClienteBuscar.aspx.designer.vb">
+      <DependentUpon>ClienteBuscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteBuscar.aspx.vb">
+      <DependentUpon>ClienteBuscar.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ClienteInsertar.aspx.designer.vb">

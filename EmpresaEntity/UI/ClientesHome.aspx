@@ -21,6 +21,10 @@
     <div align="center">
         <asp:Button ID="btnInsertar" runat="server" Text="Insertar" Width="180px" />
         <br />
+         <br />
+        <br />
+        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="180px" />
+        <br />
         <br />
         <br />
         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" Width="180px" />

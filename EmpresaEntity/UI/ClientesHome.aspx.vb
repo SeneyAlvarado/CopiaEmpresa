@@ -24,4 +24,8 @@
     Protected Sub btnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
         Response.Redirect("Home.aspx")
     End Sub
+
+    Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Response.Redirect("ClienteBuscar.aspx")
+    End Sub
 End Class
