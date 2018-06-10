@@ -41,15 +41,6 @@ Partial Public Class FacturaInsertar
     Protected WithEvents txtCedula As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtIDProduct control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtIDProduct As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
     '''rfvCedula control.
     '''</summary>
     '''<remarks>
@@ -57,6 +48,15 @@ Partial Public Class FacturaInsertar
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rfvCedula As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
+    '''btnBuscarCliente control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnBuscarCliente As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''lblNombreCliente control.
@@ -93,4 +93,112 @@ Partial Public Class FacturaInsertar
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblTelefono As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''lblIDProducto control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblIDProducto As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''txtIDProduct control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDProduct As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''revIDProducto control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents revIDProducto As Global.System.Web.UI.WebControls.RegularExpressionValidator
+    
+    '''<summary>
+    '''rfvIDProducto control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvIDProducto As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
+    '''lblCantidad control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblCantidad As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''txtCantidad control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtCantidad As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''revCantidad control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents revCantidad As Global.System.Web.UI.WebControls.RegularExpressionValidator
+    
+    '''<summary>
+    '''rfvCantidad control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvCantidad As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
+    '''btnAgregarProducto control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnAgregarProducto As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''grdDetalleFactura control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents grdDetalleFactura As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''btnGenerarFactura control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnGenerarFactura As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnRegresar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnRegresar As Global.System.Web.UI.WebControls.Button
 End Class
