@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteTO.vb" />
+    <Compile Include="Detalles_FacturaTO.vb" />
     <Compile Include="FacturaTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

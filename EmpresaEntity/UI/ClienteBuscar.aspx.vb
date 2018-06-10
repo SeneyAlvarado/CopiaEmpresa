@@ -19,7 +19,6 @@ Public Class ClienteBuscar
             txtApellido.Text = cliente.Apellido
             txtCorreo.Text = cliente.Correo
             txtTelefono.Text = cliente.Telefono
-
             lblMensaje.Text = ""
         Catch ex As Exception
             lblMensaje.Text = "El cliente no existe"

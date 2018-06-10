@@ -131,6 +131,45 @@ namespace DAO
             }
         }
 
+        public void extraerProductoCantidad(int codigo, int cantidad)
+        {
+            Boolean error = true;
+            using (context = new EmpresaEntities())
+            {
+                var query = from producto in context.Productoes
+                            where codigo == producto.ID_Producto
+                            select producto;
+
+
+                if (query != null)
+                {
+                    foreach (Producto c in query)
+                    {
+                        if (c.Cantidad_Disponible >= cantidad)
+                        {
+                            actualizarCantidadProducto(codigo, c.Cantidad_Disponible - cantidad);
+                            error = false;
+                        }
+                    }
+                }
+                if (error)
+                {
+                    throw new DbUpdateException();
+                }
+            }
+        }
+
+        public void actualizarCantidadProducto(int codigo, int cantidad)
+        {
+            context = new EmpresaEntities();
+            Producto productoDAO = (from producto in context.Productoes
+                                    where producto.ID_Producto == codigo
+                                    select producto).First();
+
+            productoDAO.Cantidad_Disponible = cantidad;
+            context.SaveChanges();
+        }
+
 
     }
 }

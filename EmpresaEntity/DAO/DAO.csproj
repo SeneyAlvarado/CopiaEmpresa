@@ -54,6 +54,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ClienteDAO.cs" />
+    <Compile Include="Detalles_FacturaDAO.cs" />
     <Compile Include="Detalle_Factura.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

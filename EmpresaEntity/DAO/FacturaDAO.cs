@@ -23,7 +23,7 @@ namespace DAO
 
                     Cliente = facturaTo.Cliente,
                     Fecha_Hora = serverDate,
-                    Total = facturaTo.Total
+                    Total = 0
                 };
                 context.Facturas.Add(facturaDAO);
                 context.SaveChanges();

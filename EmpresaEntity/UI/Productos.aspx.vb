@@ -24,4 +24,8 @@
     Protected Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
         Response.Redirect("ProductoActualizar.aspx")
     End Sub
+
+    Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Response.Redirect("ProductoBuscar.aspx")
+    End Sub
 End Class
