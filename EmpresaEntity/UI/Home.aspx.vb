@@ -14,7 +14,7 @@
     End Sub
 
     Protected Sub btnFacturas_Click(sender As Object, e As EventArgs) Handles btnFacturas.Click
-        Response.Redirect("Facturas.aspx")
+        Response.Redirect("FacturaInsertar.aspx")
     End Sub
 
     Protected Sub btnReporteFact_Click(sender As Object, e As EventArgs) Handles btnReporteFact.Click
