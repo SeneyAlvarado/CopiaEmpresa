@@ -54,6 +54,8 @@
     width: 90px; margin-left: 17px;" Width="119px"></asp:Label>
              <br />
              <br />
+             <asp:Label ID="lblMensaje" runat="server" style="display: inline-block;
+    width: 90px; margin-left: 17px;" Width="119px"></asp:Label>
              <br />
              <br />
              </div>

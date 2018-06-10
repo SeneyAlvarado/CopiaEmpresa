@@ -95,6 +95,15 @@ Partial Public Class FacturaInsertar
     Protected WithEvents lblTelefono As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''lblMensaje control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''lblIDProducto control.
     '''</summary>
     '''<remarks>
