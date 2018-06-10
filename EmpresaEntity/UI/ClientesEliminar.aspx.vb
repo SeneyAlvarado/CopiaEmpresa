@@ -12,9 +12,11 @@ Public Class ClientesDelete
             clienteBL.eliminarCliente(txtCedula.Text.Trim)
             lblMensaje.Text = "Cliente eliminado."
         Catch ex As Exception
-            lblMensaje.Text = "Error al eliminar el cliente. Es posible que el cliente posea facturación."
+            lblMensaje.Text = "Error al eliminar el cliente. Es posible que el cliente posea facturación o no exista"
         End Try
+    End Sub
 
-
+    Protected Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click
+        Response.Redirect("Home.aspx")
     End Sub
 End Class

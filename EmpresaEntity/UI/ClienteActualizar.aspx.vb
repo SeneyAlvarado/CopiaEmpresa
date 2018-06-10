@@ -30,27 +30,33 @@ Public Class ClienteActualizar
     End Sub
 
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Dim cedula As String = txtCedula.Text.Trim()
-        cliente.buscarCliente(cedula)
+        Try
+            Dim cedula As String = txtCedula.Text.Trim()
+            cliente.buscarCliente(cedula)
 
-        txtNombre.Text = cliente.Nombre
-        txtApellido.Text = cliente.Apellido
-        txtCorreo.Text = cliente.Correo
-        txtTelefono.Text = cliente.Telefono
+            txtNombre.Text = cliente.Nombre
+            txtApellido.Text = cliente.Apellido
+            txtCorreo.Text = cliente.Correo
+            txtTelefono.Text = cliente.Telefono
 
-        txtCedula.Enabled = False
-        txtNombre.Enabled = True
-        txtApellido.Enabled = True
-        txtCorreo.Enabled = True
-        txtTelefono.Enabled = True
-        btnActualizar.Enabled = True
-        btnActualizar.Visible = True
-        btnBuscar.Enabled = False
-        btnBuscar.Visible = False
-        rfvCorreo.Enabled = True
-        rfvApellido.Enabled = True
-        rfvNombre.Enabled = True
-        rfvTelefono.Enabled = True
+            txtCedula.Enabled = False
+            txtNombre.Enabled = True
+            txtApellido.Enabled = True
+            txtCorreo.Enabled = True
+            txtTelefono.Enabled = True
+            btnActualizar.Enabled = True
+            btnActualizar.Visible = True
+            btnBuscar.Enabled = False
+            btnBuscar.Visible = False
+            rfvCorreo.Enabled = True
+            rfvApellido.Enabled = True
+            rfvNombre.Enabled = True
+            rfvTelefono.Enabled = True
+            lblMensaje.Text = ""
+        Catch ex As Exception
+            lblMensaje.Text = "El cliente no existe"
+        End Try
+
 
     End Sub
 

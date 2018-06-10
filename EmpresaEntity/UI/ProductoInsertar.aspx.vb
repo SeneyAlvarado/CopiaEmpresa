@@ -13,9 +13,14 @@ Public Class ProductoInsertar
         Dim cantidad As Integer = Integer.Parse(txtCantidad.Text.Trim())
         Dim descripcion As String = txtDescripcion.Text.Trim()
         Dim precio As Double = Double.Parse(txtPrecio.Text.Trim())
-        productoBL.agregarProducto(IdProducto, descripcion, precio,
-     cantidad)
-        lblMensaje.Text = "Transaccion finalizada"
+        Try
+            productoBL.agregarProducto(IdProducto, descripcion, precio,
+                 cantidad)
+            lblMensaje.Text = "Transaccion finalizada"
+        Catch ex As Exception
+            lblMensaje.Text = "Error al insertar. Verifique que los datos sean válidos y que un producto
+con ese identificador no exista."
+        End Try
     End Sub
 
     Protected Sub btnInicio_Click(sender As Object, e As EventArgs) Handles btnInicio.Click

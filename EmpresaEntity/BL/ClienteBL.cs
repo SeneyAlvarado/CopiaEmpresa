@@ -16,14 +16,14 @@ namespace BL
         public String Apellido;
         public String Correo;
         public int Telefono;
-        public DAOHandler dao;
+        public ClienteDAO clienteDao;
 
         public void getClients(DataTable tableClients)
         {
-            dao = new DAOHandler();
+            clienteDao = new ClienteDAO();
             tableClients.Rows.Clear();
 
-            foreach (TO.ClienteTO item in dao.getClients())
+            foreach (TO.ClienteTO item in clienteDao.getClients())
             {
                 tableClients.Rows.Add(item.Cedula, item.Nombre, item.Apellido
                     , item.Correo, item.Telefono);
@@ -33,33 +33,52 @@ namespace BL
         public void agregarCliente(String cedula, String nombre, String apellido,
             String correo, int telefono)
         {
-            this.Cedula = cedula;
-            this.Nombre = nombre;
-            this.Apellido = apellido;
-            this.Correo = correo;
-            this.Telefono = telefono;
 
-            ClienteTO toCliente = new ClienteTO(Cedula, Nombre, Apellido, Correo, Telefono);
+            try
+            {
+                this.Cedula = cedula;
+                this.Nombre = nombre;
+                this.Apellido = apellido;
+                this.Correo = correo;
+                this.Telefono = telefono;
 
-            dao = new DAOHandler();
-            dao.insertarCliente(toCliente);
+                ClienteTO toCliente = new ClienteTO(Cedula, Nombre, Apellido, Correo, Telefono);
+
+                clienteDao = new ClienteDAO();
+                clienteDao.insertarCliente(toCliente);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
 
         }
 
         public void buscarCliente(String cedula)
         {
-            this.Cedula = cedula;
 
-            ClienteTO clienteTO = new ClienteTO();
-            clienteTO.Cedula = this.Cedula;
+            try
+            {
+                this.Cedula = cedula;
 
-            dao = new DAOHandler();
-            dao.extraerCliente(clienteTO);
+                ClienteTO clienteTO = new ClienteTO();
+                clienteTO.Cedula = this.Cedula;
 
-            this.Nombre = clienteTO.Nombre;
-            this.Apellido = clienteTO.Apellido;
-            this.Correo = clienteTO.Correo;
-            this.Telefono = clienteTO.Telefono;
+                clienteDao = new ClienteDAO();
+                clienteDao.extraerCliente(clienteTO);
+
+                this.Nombre = clienteTO.Nombre;
+                this.Apellido = clienteTO.Apellido;
+                this.Correo = clienteTO.Correo;
+                this.Telefono = clienteTO.Telefono;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         public void actualizarCliente(String cedula, String nombre, String apellido, 
@@ -73,8 +92,8 @@ namespace BL
 
             ClienteTO clienteTO = new ClienteTO(cedula, nombre, apellido, correo, telefono);
 
-            dao = new DAOHandler();
-            dao.actualizarCliente(clienteTO);
+            clienteDao = new ClienteDAO();
+            clienteDao.actualizarCliente(clienteTO);
         }
 
         public void eliminarCliente(String cedula)
@@ -86,8 +105,8 @@ namespace BL
 
             try
             {
-                dao = new DAOHandler();
-                dao.eliminarCliente(clienteTO);
+                clienteDao = new ClienteDAO();
+                clienteDao.eliminarCliente(clienteTO);
             }
             catch (Exception e)
             {

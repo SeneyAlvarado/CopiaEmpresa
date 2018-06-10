@@ -16,14 +16,14 @@ namespace BL
         public double SubTotal;
         public DateTime FechaHora;
         public double Total;
-        public DAOHandler dao = new DAOHandler();
+        public FacturaDAO dacturaDao = new FacturaDAO();
 
 
         public void getFacturas(DataTable tableFacturas)
         {
             tableFacturas.Rows.Clear();
 
-            foreach (FacturaTO item in dao.getFacturas())
+            foreach (FacturaTO item in dacturaDao.getFacturas())
             {
                 tableFacturas.Rows.Add(item.Consecutivo, item.FechaHora, item.Cliente
                     , item.Total);
@@ -41,8 +41,8 @@ namespace BL
             facturaTO.Cliente = this.Cliente;
             facturaTO.Total = this.Total;
 
-            dao = new DAOHandler();
-            dao.insertarFactura(facturaTO);
+            dacturaDao = new FacturaDAO();
+            dacturaDao.insertarFactura(facturaTO);
         }
     }
 }

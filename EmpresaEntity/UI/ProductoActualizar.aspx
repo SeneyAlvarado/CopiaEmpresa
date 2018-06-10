@@ -60,10 +60,10 @@
         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="157px" />
         <br />
         <br />
-        <asp:Button ID="btnMostrarClientes" runat="server" Height="23px" Text="Mostrar todos los ptoductos" Width="157px" />
+        <asp:Button ID="btnMostrarProductos" runat="server" Height="23px" Text="Mostrar todos los productos" Width="157px" />
         <br />
         <br />
-        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="157px" />
+        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="157px" CausesValidation="False" />
         <br />
         <br />
         <asp:Label ID="lblMensaje" runat="server"></asp:Label>

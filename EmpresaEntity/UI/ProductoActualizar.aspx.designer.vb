@@ -167,13 +167,13 @@ Partial Public Class ProductoActualizar
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''btnMostrarClientes control.
+    '''btnMostrarProductos control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnMostrarClientes As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnMostrarProductos As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''btnInicio control.
