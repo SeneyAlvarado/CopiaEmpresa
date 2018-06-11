@@ -23,8 +23,35 @@ Public Class RegistroFactuas
                 lblMensaje.Text = "La fecha final NO puede ser menor a la fecha de inicio"
             Else
                 lblMensaje.Text = "La fecha de inicio es menor a la fecha final"
-            End If
+                Dim reporteBL As New ReporteFacturacionBL()
+                Dim lista As New List(Of FacturaBL)
 
+                lista = reporteBL.historico(cedula, fechaInicio, fechaFin)
+
+                If lista Is Nothing Or lista.Count = 0 Then
+                    lblMensaje.Text = "No hay facturas que mostrar para el cliente"
+                Else
+                    Dim table As New DataTable()
+
+                    table.Columns.Add("Cliente")
+                    table.Columns.Add("Consecutivo")
+                    table.Columns.Add("Fecha")
+                    table.Columns.Add("Total Factura")
+
+                    Dim row As DataRow
+                    For i = 0 To lista.Count - 1
+                        row = table.NewRow()
+                        row("Cliente") = lista(i).Cliente
+                        row("Consecutivo") = lista(i).Consecutivo
+                        row("Fecha") = lista(i).FechaHora
+                        row("Total Factura") = lista(i).Total
+
+                        table.Rows.Add(row)
+                    Next
+                    GridView1.DataSource = table
+                    GridView1.DataBind()
+                End If
+            End If
         Catch
             lblMensaje.Text = "El cliente no existe"
         End Try
