@@ -1,5 +1,4 @@
 ﻿Public Class ReporteFacturacionTO
-    Public Property Consecutivo As Integer
     Public Property Cliente As String
     Public Property Historico As List(Of FacturaTO)
     Public Property FechaInicio As String
