@@ -37,5 +37,31 @@ namespace BL
             
         }
 
+        public List<Detalle_FacturaBL> obtenerDetalles(int numeroFactura)
+        {
+            this.Consecutivo_Factura = numeroFactura;
+
+            Detalles_FacturaTO detalleTO = new Detalles_FacturaTO();
+            detalleTO.Consecutivo_Factura = this.Consecutivo_Factura;
+
+            List<Detalles_FacturaTO> lista = new List<Detalles_FacturaTO>();
+            List<Detalle_FacturaBL> listaBL = new List<Detalle_FacturaBL>();
+            lista = detalleDAO.obtenerDetalles(detalleTO);
+
+            if (lista != null)
+            {
+                Detalle_FacturaBL dBL;
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    dBL = new Detalle_FacturaBL();
+                    dBL.Cantidad = lista[i].Cantidad;
+                    dBL.Codigo_Producto = lista[i].Codigo_Producto;
+                    dBL.Consecutivo_Factura = lista[i].Consecutivo_Factura;
+                    listaBL.Add(dBL);
+                }
+            }
+            return listaBL;
+        }
+
     }
 }
