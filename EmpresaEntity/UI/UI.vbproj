@@ -96,6 +96,7 @@
     <Content Include="ClientesEliminar.aspx" />
     <Content Include="ClienteSelect.aspx" />
     <Content Include="ClientesHome.aspx" />
+    <Content Include="DetalleFactura.aspx" />
     <Content Include="FacturaInsertar.aspx" />
     <Content Include="ProductoActualizar.aspx" />
     <Content Include="ProductoBuscar.aspx" />
@@ -148,6 +149,13 @@
     </Compile>
     <Compile Include="ClientesHome.aspx.vb">
       <DependentUpon>ClientesHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DetalleFactura.aspx.designer.vb">
+      <DependentUpon>DetalleFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleFactura.aspx.vb">
+      <DependentUpon>DetalleFactura.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FacturaInsertar.aspx.designer.vb">

@@ -56,6 +56,11 @@
             <asp:GridView ID="GridView1" runat="server">
             </asp:GridView>
             <br />
+            <asp:Label ID="lblMontoTotal" runat="server"></asp:Label>
+            <br />
+            <br />
+            <asp:Button ID="btnDetalleFactura" runat="server" CausesValidation="False" Text="Mostrar detalle factura" />
+            <br />
 
 
         </div>

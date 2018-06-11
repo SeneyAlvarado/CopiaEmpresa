@@ -35,5 +35,36 @@ namespace DAO
             }
            
             }
+
+        public List<Detalles_FacturaTO> obtenerDetalles(Detalles_FacturaTO detallesTO)
+        {
+            List<Detalles_FacturaTO> lista = new List<Detalles_FacturaTO>();
+            using (context = new EmpresaEntities())
+            {
+                var query = from detalle in context.Detalle_Factura
+                            where detallesTO.Consecutivo_Factura == detalle.Factura
+                            select detalle;
+
+                
+                Detalles_FacturaTO dTO;
+
+                if (query != null)
+                {
+                    foreach (Detalle_Factura df in query)
+                    {
+                        dTO = new Detalles_FacturaTO();
+                        dTO.Consecutivo_Factura = df.Factura;
+                        dTO.Cantidad = df.Cantidad;
+                        dTO.Codigo_Producto = df.Producto;
+                        lista.Add(dTO);
+                    }
+                } else
+                {
+                    throw new Exception("No hay productos para mostrar de la factura");
+                }
+                
+            }
+            return lista;
+        }
         }
     }

@@ -120,4 +120,22 @@ Partial Public Class RegistroFactuas
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''lblMontoTotal control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMontoTotal As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''btnDetalleFactura control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnDetalleFactura As Global.System.Web.UI.WebControls.Button
 End Class

@@ -43,5 +43,15 @@ namespace BL
 
             return facturas;
         }
+
+        public double totalFacturas(List<FacturaBL> lista)
+        {
+            double total = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                total += lista[i].Total;
+            }
+            return total;
+        }
     }
 }

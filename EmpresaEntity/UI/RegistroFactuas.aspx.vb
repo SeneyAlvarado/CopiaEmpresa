@@ -3,7 +3,8 @@ Public Class RegistroFactuas
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        btnDetalleFactura.Enabled = False
+        btnDetalleFactura.Visible = False
     End Sub
 
     Protected Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
@@ -22,7 +23,6 @@ Public Class RegistroFactuas
             If (fechaFin.CompareTo(fechaInicio) < 0) Then
                 lblMensaje.Text = "La fecha final NO puede ser menor a la fecha de inicio"
             Else
-                lblMensaje.Text = "La fecha de inicio es menor a la fecha final"
                 Dim reporteBL As New ReporteFacturacionBL()
                 Dim lista As New List(Of FacturaBL)
 
@@ -50,10 +50,18 @@ Public Class RegistroFactuas
                     Next
                     GridView1.DataSource = table
                     GridView1.DataBind()
+                    Dim total As Double = reporteBL.totalFacturas(lista)
+                    lblMontoTotal.Text = "El monto total de todas las facturas es de: " & total & "."
+                    btnDetalleFactura.Enabled = True
+                    btnDetalleFactura.Visible = True
                 End If
             End If
         Catch
             lblMensaje.Text = "El cliente no existe"
         End Try
+    End Sub
+
+    Protected Sub btnDetalleFactura_Click(sender As Object, e As EventArgs) Handles btnDetalleFactura.Click
+        Response.Redirect("DetalleFactura.aspx")
     End Sub
 End Class
