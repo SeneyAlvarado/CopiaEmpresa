@@ -1,6 +1,8 @@
 ﻿Public Class ReporteFacturacionTO
     Public Property Consecutivo As Integer
-    Public Property Cliente As ClienteTO
+    Public Property Cliente As String
     Public Property Historico As List(Of FacturaTO)
+    Public Property FechaInicio As String
+    Public Property FechaFin As String
     Public Property Total As Double
 End Class

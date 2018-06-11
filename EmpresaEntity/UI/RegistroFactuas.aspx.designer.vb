@@ -59,6 +59,15 @@ Partial Public Class RegistroFactuas
     Protected WithEvents lblFechaInicio As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''txtFechaInicio control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtFechaInicio As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''lblFechaFin control.
     '''</summary>
     '''<remarks>
@@ -66,6 +75,15 @@ Partial Public Class RegistroFactuas
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblFechaFin As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''txtFechaFin control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtFechaFin As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''btnConsultar control.
@@ -84,6 +102,15 @@ Partial Public Class RegistroFactuas
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnRegresar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''lblMensaje control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''GridView1 control.
