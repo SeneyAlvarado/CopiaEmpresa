@@ -30,7 +30,8 @@
 
             <asp:Label ID="lblFechaInicio" runat="server" Text="Fecha Inicio" style="display: inline-block;
     width: 125px;"></asp:Label>
-            <input type="date" name="FechaInicio" min="01-01-1900" max="31-12-2099" required="required"/>
+            <!--input type="date" name="FechaInicio" min="01-01-1900" max="31-12-2099" required="required" id="inputFechaInicio"/-->
+            <asp:TextBox ID="txtFechaInicio" runat="server" TextMode="Date" required="required"></asp:TextBox>
             <br />
             <br />
             <br />
@@ -38,7 +39,8 @@
 
             <asp:Label ID="lblFechaFin" runat="server" Text="Fecha Fin" style="display: inline-block;
     width: 125px;"></asp:Label>
-            <input type="date" name="FechaFin" min="01-01-1900" max="31-12-2099" required="required"/>
+            <asp:TextBox ID="txtFechaFin" runat="server" TextMode="Date" required="required"></asp:TextBox>
+            <!--input type="date" name="FechaFin" min="01-01-1900" max="31-12-2099" required="required" id="inputFechaFin"/-->
             <br />
             <br />
             <br />
@@ -47,6 +49,8 @@
             <br />
             <asp:Button ID="btnRegresar" runat="server" CausesValidation="False" Text="Regresar" Width="83px" />
             <br />
+            <br />
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
             <br />
             <br />
             <asp:GridView ID="GridView1" runat="server">
