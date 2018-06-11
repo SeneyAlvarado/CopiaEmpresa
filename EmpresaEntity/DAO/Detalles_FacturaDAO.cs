@@ -23,9 +23,10 @@ namespace DAO
                         Producto = detalleTO.Codigo_Producto,
                         Cantidad = detalleTO.Cantidad
                     };
-                    productoDAO.extraerProductoCantidad(detalleTO.Codigo_Producto, detalleTO.Cantidad);
+                    
                     context.Detalle_Factura.Add(detalleDAO);
                     context.SaveChanges();
+                    productoDAO.extraerProductoCantidad(detalleTO.Codigo_Producto, detalleTO.Cantidad);
                 }
             }
             catch (Exception)

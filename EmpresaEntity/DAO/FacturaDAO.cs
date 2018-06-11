@@ -7,10 +7,12 @@ using System.Data.Entity.Infrastructure;
 
 namespace DAO
 {
+
     public class FacturaDAO
     {
 
         private EmpresaEntities context;
+
 
         public void insertarFactura(FacturaTO facturaTo)
         {
@@ -18,6 +20,7 @@ namespace DAO
             {
                 var dateQuery = context.Database.SqlQuery<DateTime>("SELECT getdate()");
                 DateTime serverDate = dateQuery.AsEnumerable().First();
+
                 Factura facturaDAO = new Factura
                 {
 
@@ -27,9 +30,18 @@ namespace DAO
                 };
                 context.Facturas.Add(facturaDAO);
                 context.SaveChanges();
+
+                var query = from factura in context.Facturas
+                            select factura;
+
+                List<FacturaTO> list = new List<FacturaTO>();
+
+                foreach (Factura factura in query) { 
+                    facturaTo.Consecutivo = factura.Consecutivo;
+                }
+
             }
         }
-
         public List<TO.FacturaTO> getFacturas()
         {
             using (context = new EmpresaEntities())
@@ -52,5 +64,19 @@ namespace DAO
                 return list;
             }
         }
+
+        public void actualizarTotalFactura(FacturaTO facturaTO)
+        {
+            context = new EmpresaEntities();
+
+            Factura factura = (from facturas in context.Facturas
+                               where facturas.Consecutivo == facturaTO.Consecutivo
+                               select facturas).First();
+
+            factura.Total = facturaTO.Total;
+            context.SaveChanges();
+        }
     }
+
+
 }

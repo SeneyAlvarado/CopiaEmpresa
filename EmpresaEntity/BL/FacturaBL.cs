@@ -12,37 +12,51 @@ namespace BL
     {
         public int Consecutivo;
         public String Cliente;
-        public ProductoBL Producto;
+        public  List<ProductoBL> ListaProductos;
         public double SubTotal;
         public DateTime FechaHora;
         public double Total;
-        public FacturaDAO dacturaDao = new FacturaDAO();
+        public FacturaDAO facturaDAO = new FacturaDAO();
 
+        public FacturaBL()
+        {
+            ListaProductos = new List<ProductoBL>();
+        }
 
         public void getFacturas(DataTable tableFacturas)
         {
             tableFacturas.Rows.Clear();
 
-            foreach (FacturaTO item in dacturaDao.getFacturas())
+            foreach (FacturaTO item in facturaDAO.getFacturas())
             {
                 tableFacturas.Rows.Add(item.Consecutivo, item.FechaHora, item.Cliente
                     , item.Total);
             }
         }
 
-        public void agregarFactura(DateTime FechaHora, String cliente, float total)
+        public void agregarFactura(String cliente)
         {
-            this.FechaHora = FechaHora;
             this.Cliente = cliente;
-            this.Total = total;
 
             FacturaTO facturaTO = new FacturaTO();
-            facturaTO.FechaHora = this.FechaHora;
             facturaTO.Cliente = this.Cliente;
+
+            facturaDAO = new FacturaDAO();
+            facturaDAO.insertarFactura(facturaTO);
+            this.Consecutivo = facturaTO.Consecutivo;
+        }
+
+        public void actualizarTotalFactura(double total)
+        {
+            this.Total = this.Total +  total;
+
+            FacturaTO facturaTO = new FacturaTO();
+            facturaTO.Consecutivo = this.Consecutivo;
             facturaTO.Total = this.Total;
 
-            dacturaDao = new FacturaDAO();
-            dacturaDao.insertarFactura(facturaTO);
+            facturaDAO = new FacturaDAO();
+            facturaDAO.actualizarTotalFactura(facturaTO);
         }
+
     }
 }
