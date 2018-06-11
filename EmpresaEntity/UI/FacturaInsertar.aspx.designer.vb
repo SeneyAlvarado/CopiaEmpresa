@@ -212,6 +212,15 @@ Partial Public Class FacturaInsertar
     Protected WithEvents grdDetalleFactura As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
+    '''lblTotal control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblTotal As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''btnGenerarFactura control.
     '''</summary>
     '''<remarks>

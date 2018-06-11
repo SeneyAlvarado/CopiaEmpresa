@@ -76,6 +76,35 @@ namespace DAO
             factura.Total = facturaTO.Total;
             context.SaveChanges();
         }
+
+        public void extraerFactura(FacturaTO facturaTO)
+        {
+            Boolean error = true;
+
+            using (context = new EmpresaEntities())
+            {
+                var query = from facturas in context.Facturas
+                            where facturaTO.Consecutivo == facturas.Consecutivo
+                            select facturas;
+
+                if (query != null)
+                {
+                    foreach (Factura c in query)
+                    {
+                        error = false;
+                        facturaTO.Consecutivo = c.Consecutivo;
+                        facturaTO.Cliente = c.Cliente;
+                        facturaTO.FechaHora = c.Fecha_Hora;
+                        facturaTO.Total = c.Total;
+                    }
+                }
+                if (error)
+                {
+                    throw new DbUpdateException();
+                }
+            }
+        }
+
     }
 
 

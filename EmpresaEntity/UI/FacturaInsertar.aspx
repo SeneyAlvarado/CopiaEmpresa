@@ -86,6 +86,8 @@
              <br />
              <asp:GridView ID="grdDetalleFactura" runat="server">
              </asp:GridView>
+            <br />
+             <asp:Label ID="lblTotal" runat="server" Text="Total: 0"></asp:Label>
              <br />
              <br />
              <asp:Button ID="btnGenerarFactura" runat="server" Text="Generar Factura" width="142px"/>

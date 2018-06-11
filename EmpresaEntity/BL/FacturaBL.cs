@@ -12,7 +12,7 @@ namespace BL
     {
         public int Consecutivo;
         public String Cliente;
-        public  List<ProductoBL> ListaProductos;
+        public List<ProductoBL> ListaProductos;
         public double SubTotal;
         public DateTime FechaHora;
         public double Total;
@@ -48,7 +48,7 @@ namespace BL
 
         public void actualizarTotalFactura(double total)
         {
-            this.Total = this.Total +  total;
+            this.Total = this.Total + total;
 
             FacturaTO facturaTO = new FacturaTO();
             facturaTO.Consecutivo = this.Consecutivo;
@@ -58,5 +58,26 @@ namespace BL
             facturaDAO.actualizarTotalFactura(facturaTO);
         }
 
+        public void buscarFactura(String consecutivo)
+        {
+            try
+            {
+                this.Consecutivo = int.Parse(consecutivo);
+
+                FacturaTO facturaTO = new FacturaTO();
+                facturaTO.Consecutivo = this.Consecutivo;
+
+                facturaDAO = new FacturaDAO();
+                facturaDAO.extraerFactura(facturaTO);
+
+                this.Cliente = facturaTO.Cliente;
+                this.FechaHora = facturaTO.FechaHora;
+                this.Total = facturaTO.Total;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

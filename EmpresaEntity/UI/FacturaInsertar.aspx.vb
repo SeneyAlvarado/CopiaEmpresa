@@ -36,6 +36,7 @@ Public Class FacturaInsertar
             btnCrearFactura.Enabled = False
             btnBuscarProducto.Enabled = False
             btnAgregarProducto.Enabled = False
+            lblTotal.Enabled = False
         End If
 
     End Sub
@@ -73,12 +74,8 @@ Public Class FacturaInsertar
         rfvIDProducto.Enabled = True
         btnAgregarProducto.Enabled = True
         btnCrearFactura.Enabled = False
-        txtCantidad.Enabled = True
-        revCantidad.Enabled = True
-        rfvCantidad.Enabled = True
         btnBuscarProducto.Enabled = True
         ViewState.Add("facturaConsecutivo", facturaBL.Consecutivo)
-        ViewState.Add("facturaTotal", facturaBL.Total)
     End Sub
 
     Protected Sub btnAgregarProducto_Click(sender As Object, e As EventArgs) Handles btnAgregarProducto.Click
@@ -88,7 +85,7 @@ Public Class FacturaInsertar
             productoBL.Descripcion = ViewState.Item("productoDescripcion")
             productoBL.PrecioVenta = ViewState.Item("productoPrecio")
             facturaBL.Consecutivo = ViewState.Item("facturaConsecutivo")
-            facturaBL.Total = ViewState.Item("facturaTotal")
+            facturaBL.buscarFactura(facturaBL.Consecutivo)
 
             detalleFacturaBL.agregarDetalle(facturaBL.Consecutivo, productoBL.Codigo, txtCantidad.Text.Trim)
             Dim totalProd As Double = productoBL.PrecioVenta * Integer.Parse(txtCantidad.Text.Trim)
@@ -103,6 +100,11 @@ Public Class FacturaInsertar
             grdDetalleFactura.DataSource = tablaProductos
             grdDetalleFactura.DataBind()
             lblMensaje.Text = "Producto añadido a la factura"
+            lblTotal.Enabled = True
+            lblTotal.Text = "Total: " & facturaBL.Total
+            txtCantidad.Enabled = False
+            revCantidad.Enabled = False
+            rfvCantidad.Enabled = False
         Catch ex As Exception
             lblMensaje.Text = "Error, no existe suficiente cantidad de productos"
         End Try
@@ -118,6 +120,9 @@ Public Class FacturaInsertar
             ViewState.Add("productoCantidad", productoBL.CantidadInventario)
             ViewState.Add("productoPrecio", productoBL.PrecioVenta)
             lblMensaje.Text = productoBL.Descripcion & " Cantidad: " & productoBL.CantidadInventario
+            txtCantidad.Enabled = True
+            revCantidad.Enabled = True
+            rfvCantidad.Enabled = True
         Catch ex As Exception
             lblMensaje.Text = "El producto buscado no existe"
         End Try
