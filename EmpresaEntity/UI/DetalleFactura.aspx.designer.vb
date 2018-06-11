@@ -32,40 +32,22 @@ Partial Public Class DetalleFactura
     Protected WithEvents lblFactura As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txtFactura control.
+    '''cbFactura control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFactura As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents cbFactura As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''rfvFactura control.
+    '''lblMensaje control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rfvFactura As Global.System.Web.UI.WebControls.RequiredFieldValidator
-    
-    '''<summary>
-    '''revFactura control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents revFactura As Global.System.Web.UI.WebControls.RegularExpressionValidator
-    
-    '''<summary>
-    '''btnMostrar control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnMostrar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lblMensaje As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''grdDetalleFactura control.

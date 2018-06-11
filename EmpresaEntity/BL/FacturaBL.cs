@@ -10,7 +10,7 @@ namespace BL
 {
     public class FacturaBL
     {
-        public int Consecutivo;
+        public int Consecutivo { get; set; }
         public String Cliente;
         public  List<ProductoBL> ListaProductos;
         public double SubTotal;

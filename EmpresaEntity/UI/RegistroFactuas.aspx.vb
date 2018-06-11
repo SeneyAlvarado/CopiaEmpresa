@@ -54,6 +54,7 @@ Public Class RegistroFactuas
                     lblMontoTotal.Text = "El monto total de todas las facturas es de: " & total & "."
                     btnDetalleFactura.Enabled = True
                     btnDetalleFactura.Visible = True
+                    Session("ListaFacturas") = lista
                 End If
             End If
         Catch
