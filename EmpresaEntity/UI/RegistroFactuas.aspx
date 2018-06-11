@@ -31,15 +31,19 @@
             <asp:Label ID="lblFechaInicio" runat="server" Text="Fecha Inicio" style="display: inline-block;
     width: 125px;"></asp:Label>
             <!--input type="date" name="FechaInicio" min="01-01-1900" max="31-12-2099" required="required" id="inputFechaInicio"/-->
-            <asp:TextBox ID="txtFechaInicio" runat="server" TextMode="Date" required="required"></asp:TextBox>
+            <asp:TextBox ID="txtFechaInicio" runat="server" TextMode="Date"></asp:TextBox>
             <br />
+            <asp:RequiredFieldValidator ID="rfvFechaInicio" runat="server" ErrorMessage="Campo Requerido" ControlToValidate="txtFechaInicio"></asp:RequiredFieldValidator>
             <br />
             <br />
             <br />
 
             <asp:Label ID="lblFechaFin" runat="server" Text="Fecha Fin" style="display: inline-block;
     width: 125px;"></asp:Label>
-            <asp:TextBox ID="txtFechaFin" runat="server" TextMode="Date" required="required"></asp:TextBox>
+            <asp:TextBox ID="txtFechaFin" runat="server" TextMode="Date"></asp:TextBox>
+                      
+            <br />  <asp:RequiredFieldValidator ID="rfvFechaFin" runat="server" ErrorMessage="Campo Requerido" ControlToValidate="txtFechaFin"></asp:RequiredFieldValidator>
+
             <!--input type="date" name="FechaFin" min="01-01-1900" max="31-12-2099" required="required" id="inputFechaFin"/-->
             <br />
             <br />
@@ -47,7 +51,7 @@
             <asp:Button ID="btnConsultar" runat="server" Text="Consultar" />
             <br />
             <br />
-            <asp:Button ID="btnRegresar" runat="server" CausesValidation="False" Text="Regresar" Width="83px" />
+            <asp:Button ID="btnRegresar" runat="server" CausesValidation="False" Text="Regresar" Width="83px" ValidationGroup="noVali" />
             <br />
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>

@@ -27,7 +27,9 @@
         <br />
         <asp:RequiredFieldValidator ID="rfvIDProducto" runat="server" ControlToValidate="txtIDProducto" ErrorMessage="Campo Requerido"></asp:RequiredFieldValidator>
         <br />
+        <asp:RegularExpressionValidator ID="revIDProducto" runat="server" ControlToValidate="txtIDProduct" ErrorMessage="Utilice únicamente números" ValidationExpression="^[0-9]*"></asp:RegularExpressionValidator>
         <br />
+         <br />
         <asp:Label ID="lblDescripcion" runat="server" Text="Descripción" style="display: inline-block;
     width: 90px;"></asp:Label>
         <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>

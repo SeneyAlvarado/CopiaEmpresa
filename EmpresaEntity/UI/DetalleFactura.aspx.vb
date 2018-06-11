@@ -37,6 +37,9 @@ Public Class DetalleFactura
             grdDetalleFactura.DataSource = table
             grdDetalleFactura.DataBind()
             ViewState.Add("detalles", table)
+            If table.Rows.Count = 0 Then
+                lblMensaje.Text = "Error, la factura no tiene productos por mostrar"
+            End If
         End If
 
 

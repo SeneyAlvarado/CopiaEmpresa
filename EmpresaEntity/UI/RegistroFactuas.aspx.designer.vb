@@ -68,6 +68,15 @@ Partial Public Class RegistroFactuas
     Protected WithEvents txtFechaInicio As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''rfvFechaInicio control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvFechaInicio As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
     '''lblFechaFin control.
     '''</summary>
     '''<remarks>
@@ -84,6 +93,15 @@ Partial Public Class RegistroFactuas
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtFechaFin As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''rfvFechaFin control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvFechaFin As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
     '''btnConsultar control.

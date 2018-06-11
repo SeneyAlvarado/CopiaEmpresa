@@ -50,6 +50,15 @@ Partial Public Class ProductoInsertar
     Protected WithEvents rfvIDProducto As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
+    '''revIDProducto control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents revIDProducto As Global.System.Web.UI.WebControls.RegularExpressionValidator
+    
+    '''<summary>
     '''lblDescripcion control.
     '''</summary>
     '''<remarks>
