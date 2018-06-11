@@ -59,6 +59,15 @@ Partial Public Class FacturaInsertar
     Protected WithEvents btnBuscarCliente As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
+    '''btnCrearFactura control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCrearFactura As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''lblNombreCliente control.
     '''</summary>
     '''<remarks>
@@ -174,6 +183,15 @@ Partial Public Class FacturaInsertar
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rfvCantidad As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
+    '''btnBuscarProducto control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnBuscarProducto As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''btnAgregarProducto control.

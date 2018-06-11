@@ -14,13 +14,13 @@ namespace BL
         public int Cantidad;
         public Detalles_FacturaDAO detalleDAO = new Detalles_FacturaDAO();
 
-        public void agregarDetalle(String factura, String producto, int cantidad)
+        public void agregarDetalle(String factura, String producto, String cantidad)
         {
             try
             {
                 this.Consecutivo_Factura = int.Parse(factura);
                 this.Codigo_Producto = int.Parse(producto);
-                this.Cantidad = cantidad;
+                this.Cantidad = int.Parse(cantidad);
 
                 Detalles_FacturaTO detalleTO = new Detalles_FacturaTO();
                 detalleTO.Consecutivo_Factura = this.Consecutivo_Factura;

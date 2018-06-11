@@ -32,7 +32,8 @@
         <asp:RequiredFieldValidator ID="rfvCedula" runat="server" ControlToValidate="txtCedula" ErrorMessage="Campo Requerido"></asp:RequiredFieldValidator>
              <br />
              <br />
-             <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar" />
+             <asp:Button ID="btnBuscarCliente" runat="server" Text="Buscar Cliente" Width="100px" />
+             <asp:Button ID="btnCrearFactura" runat="server" style="margin-left: 27px" Text="Crear Factura" />
              </div>
         <br/>
 
@@ -78,7 +79,8 @@
              <asp:RequiredFieldValidator ID="rfvCantidad" runat="server" ControlToValidate="txtCantidad" ErrorMessage="Campo Requerido"></asp:RequiredFieldValidator>
              <br />
              <br />
-             <asp:Button ID="btnAgregarProducto" runat="server" Text="Agregar Producto" Width="134px" />
+            <asp:Button ID="btnBuscarProducto" runat="server" style="margin-left: 50px" Text="Buscar Producto" />
+             <asp:Button ID="btnAgregarProducto" runat="server" Text="Agregar Producto" style="margin-left: 50px" Width="150" />
              <br />
              <br />
              <br />
