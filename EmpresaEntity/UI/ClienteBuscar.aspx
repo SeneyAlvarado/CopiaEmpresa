@@ -54,7 +54,7 @@
         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" Width="157px" />
         <br />
         <br />
-        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="157px" />
+        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="157px" CausesValidation="False" />
         <br />
     </form>
 </body>

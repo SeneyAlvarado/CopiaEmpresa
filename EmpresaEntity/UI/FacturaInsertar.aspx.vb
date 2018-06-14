@@ -93,6 +93,9 @@ Public Class FacturaInsertar
             facturaBL.actualizarTotalFactura(totalProd)
 
             btnAgregarProducto.Enabled = False
+            revCantidad.Enabled = False
+            rfvCantidad.Enabled = False
+            txtCantidad.Enabled = False
 
             lblMensaje.Text = "Producto agregado"
             ViewState.Remove("productos")
@@ -106,7 +109,13 @@ Public Class FacturaInsertar
             revCantidad.Enabled = False
             rfvCantidad.Enabled = False
         Catch ex As Exception
-            lblMensaje.Text = "Error, no existe suficiente cantidad de productos"
+            lblMensaje.Text = "Error, ha insertado una cantidad no válida para el producto, 
+o este mismo ya ha sido facturado."
+        Finally
+            btnAgregarProducto.Enabled = False
+            revCantidad.Enabled = False
+            rfvCantidad.Enabled = False
+            txtCantidad.Enabled = False
         End Try
     End Sub
 
@@ -119,7 +128,7 @@ Public Class FacturaInsertar
             ViewState.Add("productoDescripcion", productoBL.Descripcion)
             ViewState.Add("productoCantidad", productoBL.CantidadInventario)
             ViewState.Add("productoPrecio", productoBL.PrecioVenta)
-            lblMensaje.Text = productoBL.Descripcion & " Cantidad: " & productoBL.CantidadInventario
+            lblMensaje.Text = productoBL.Descripcion & " Cantidad: " & productoBL.CantidadInventario & " Precio unitario: " & productoBL.PrecioVenta
             txtCantidad.Enabled = True
             revCantidad.Enabled = True
             rfvCantidad.Enabled = True

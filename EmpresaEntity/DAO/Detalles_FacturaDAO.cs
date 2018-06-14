@@ -23,7 +23,20 @@ namespace DAO
                         Producto = detalleTO.Codigo_Producto,
                         Cantidad = detalleTO.Cantidad
                     };
-                    
+
+                    ProductoTO productoTO = new ProductoTO();
+                    productoTO.Codigo = detalleTO.Codigo_Producto;
+
+                    productoDAO.extraerProducto(productoTO);
+
+                    if (detalleTO.Cantidad == 0)
+                    {
+                        throw new Exception("La cantidad de un producto no puede ser 0");
+                    }
+                        if (productoTO.CantidadInventario < detalleTO.Cantidad)
+                    {
+                        throw new Exception("Error, no hay suficientes productos para satisfcaer la demanda");
+                    }
                     context.Detalle_Factura.Add(detalleDAO);
                     context.SaveChanges();
                     productoDAO.extraerProductoCantidad(detalleTO.Codigo_Producto, detalleTO.Cantidad);

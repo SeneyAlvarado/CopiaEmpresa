@@ -29,10 +29,13 @@ Public Class RegistroFactuas
                 lista = reporteBL.historico(cedula, fechaInicio, fechaFin)
 
                 If lista Is Nothing Or lista.Count = 0 Then
-                    lblMensaje.Text = "No hay facturas que mostrar para el cliente"
+                    lblMensaje.Text = "No hay facturas que mostrar para el cliente en el rango de fechas establecido"
+                    lblMontoTotal.Text = ""
+                    grdFacturas.DataSource = Nothing
+                    grdFacturas.DataBind()
                 Else
                     Dim table As New DataTable()
-
+                    lblMensaje.Text = ""
                     table.Columns.Add("Cliente")
                     table.Columns.Add("Consecutivo")
                     table.Columns.Add("Fecha")
@@ -48,8 +51,8 @@ Public Class RegistroFactuas
 
                         table.Rows.Add(row)
                     Next
-                    GridView1.DataSource = table
-                    GridView1.DataBind()
+                    grdFacturas.DataSource = table
+                    grdFacturas.DataBind()
                     Dim total As Double = reporteBL.totalFacturas(lista)
                     lblMontoTotal.Text = "El monto total de todas las facturas es de: " & total & "."
                     btnDetalleFactura.Enabled = True

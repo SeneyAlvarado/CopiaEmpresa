@@ -12,7 +12,7 @@ Public Class DeleteProducto
             productoBL.eliminarProducto(txtCodigo.Text.Trim)
             lblMensaje.Text = "Producto eliminado."
         Catch ex As Exception
-            lblMensaje.Text = "Error al eliminar el producto. Verifique que el producto exista"
+            lblMensaje.Text = "Error al eliminar el producto. Verifique que el producto exista o no se encuentre facturado."
         End Try
 
     End Sub

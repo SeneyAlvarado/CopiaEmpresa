@@ -39,7 +39,7 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="180px"/>
+        <asp:Button ID="btnInicio" runat="server" Text="Inicio" Width="180px" CausesValidation="False"/>
     </div>
     </form>
 </body>
