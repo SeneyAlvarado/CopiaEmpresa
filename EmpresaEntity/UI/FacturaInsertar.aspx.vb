@@ -50,7 +50,7 @@ Public Class FacturaInsertar
             Dim cedula As String = txtCedula.Text.Trim()
             clienteBL.buscarCliente(cedula)
             lblNombreCliente.Text = "Nombre: " & clienteBL.Nombre
-            lblApellidoCliente.Text = "Apellido: " & clienteBL.Apellido
+            lblApellidoCliente.Text = "Apellidos: " & clienteBL.Apellido
             lblCorreoCliente.Text = "Correo: " & clienteBL.Correo
             lblTelefono.Text = "Teléfono: " & clienteBL.Telefono
             lblMensaje.Text = ""
